@@ -1,0 +1,23 @@
+ /* <!--
+  Sizes:
+  tiny: 1rem
+  small: 2rem
+  medium: 4rem
+  large: 6rem
+  --> */
+
+ .tiny {
+   font-size: 1rem;
+ }
+
+ .small {
+   font-size: 2rem;
+ }
+
+ .medium {
+   font-size: 4rem;
+ }
+
+ .large {
+   font-size: 6rem;
+ }
