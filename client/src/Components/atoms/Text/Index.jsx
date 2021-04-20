@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Index(props) {
   const { text, typet, press } = props;
-  console.log(press)
+  // console.log(press)
   switch (typet) {
 
     case 'h1':

@@ -99,12 +99,31 @@ lo quite
 
 
 # tutorial 
+
 ## montaje de redux en react
 npm i react-redux
-crear 
+npm i redux
+
+crear estructura 
 - src
     - redux
-        - store.js
+        - /store
+            - index.js  (1 configurarlo con 1 reducer de prueba interno)
         - /reducer
-            - index.js
-    
+
+
+en index.jsx del proyecto
+```
+import storeFn from './redux/store/index'; // nuestor store
+const store = storeFn(); // eejecuta el store
+```
+provider es el puente entre react y redux
+```
+import {Provider} from 'react-redux';
+  <Provider store={store}>
+    <App />
+  </Provider>,
+```
+**me daba error en provider use**
+**https://stackoverflow.com/questions/54187538/error-in-provider-check-the-render-method-of-provider-react-redux**
+**npm install --save react react-dom react-redux react-scripts redux**

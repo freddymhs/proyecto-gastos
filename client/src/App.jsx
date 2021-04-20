@@ -10,7 +10,8 @@ import Home from './Layout/PageHome/Index';
 import Auth from './Layout/PageAuth/Index';
 import LogOut from './Layout/PageLogOut/Index';
 
-function App() {
+function App(props) {
+  console.log(props);
   return (
     <Router>
       <Header />
