@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Header from './Components/Header/Index';
+import Header from './Components/organisms/Header/Index';
 import Home from './Layout/PageHome/Index';
 import Auth from './Layout/PageAuth/Index';
 import LogOut from './Layout/PageLogOut/Index';

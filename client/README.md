@@ -95,3 +95,16 @@ se apoya con proyectos o monetario; que ademas ayuda a practicantes;
 
 # error al subirlo a heroku por ESLINT AIRBNB 
 lo quite
+
+
+
+# tutorial 
+## montaje de redux en react
+npm i react-redux
+crear 
+- src
+    - redux
+        - store.js
+        - /reducer
+            - index.js
+    
