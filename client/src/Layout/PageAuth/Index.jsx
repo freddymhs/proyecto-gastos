@@ -1,29 +1,36 @@
 import React, { useRef } from 'react';
 import Panel from '../../Components/organisms/Panel/Panel';
-
-
-
 import Login from '../../Components/organisms/Form/Login';
-// import Register from '../../Components/organisms/Form/Register';
-
-// redux funciones
-import { connect } from 'react-redux'; // emtodo base
-// import index from '../../redux/store/index';// la store
+//
+import { useSelector } from 'react-redux'; // obtiene redux
+import { useDispatch } from 'react-redux'; // usa redux 
 import FnUpdateWord from '../../redux/store/palabra/action'; //los aciones
+
 const Index = () => {
+  const mainDispatch = useDispatch();
+  const res = useSelector(state => state.palabraReducer)
+  console.log('--------')
+  console.log(res)
+
 
   function swapForma() {
     alert('cambiar formulario');
   }
+
+
   const palabraRef = useRef(null);
   return (
     <>
 
       {/*  */}
+      -
+      <h1>{res}</h1>
+      -
+      <br />
       <input type="text" ref={palabraRef} />
-      <button
-        onClick={() => { FnUpdateWord(palabraRef.current.value) }}
-      >guardar en store</button>
+      <button onClick={() => mainDispatch(FnUpdateWord())}      >
+        guardar en store
+      </button>
 
       {/*  */}
 
@@ -36,4 +43,5 @@ const Index = () => {
 
 };
 
-export default connect(null, { FnUpdateWord })(Index)
+// export default connect(null, {FnUpdateWord})(Index)
+export default Index;

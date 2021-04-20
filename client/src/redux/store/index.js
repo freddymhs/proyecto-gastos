@@ -1,13 +1,19 @@
 import {createStore} from 'redux';// new store for this Project;
+import {combineReducers} from 'redux' // para usar todos mis reducers
 
-function reducers (){
-  return {};
-}
+import palabraReducer from './palabra/reducer';
 
+export const allReducers = combineReducers({
+  palabraReducer:palabraReducer
+});
 
 const index = () => {
+ console.log('se creo la store se supone')
  return{
-   ...createStore(reducers) // crea store[reducers,middlwares]
+   ...createStore(
+     allReducers,
+     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   )
  }
 }
  
