@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Index.module.css';
+import { Link } from 'react-router-dom';
 
 function Index(props) {
-  const { text, typet } = props;
-
+  const { text, typet, press } = props;
+  console.log(press)
   switch (typet) {
+
     case 'h1':
       return (
         <h1>{text}</h1>
@@ -29,10 +32,14 @@ function Index(props) {
       return (
         <p>{text}</p>
       );
+    case 'psmall':
+      return (
+        <p onClick={press} className={`${styles.psmall} `}        >{text}</p>
+      );
 
     default:
       return (
-        <p>{text}</p>
+        <p >{text}</p>
       );
   }
 }
